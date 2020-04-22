@@ -14,3 +14,5 @@ end
 def get_english_meaning
   # code goes here
 end
+
+load_library(emoticons)
