@@ -4,10 +4,10 @@ emoticons = YAML.load_file('lib/emoticons.yml')
 
 def load_library(emoticons)
   # code goes here
-  emoticons.reduce({}) do |emoticons_updated, (name, symbols)|
-    emoticons_updated[name] ||= {}
-    emoticons_updated[name][:english] = symbols[0]
-    emoticons_updated[name][:japanese] = symbols[1]
+  emoticons.reduce({}) do |(name, symbols)|
+    emoticons[name] ||= {}
+    emoticons[name][:english] = symbols[0]
+    emoticons[name][:japanese] = symbols[1]
   end
   emoticons_updated
 end
