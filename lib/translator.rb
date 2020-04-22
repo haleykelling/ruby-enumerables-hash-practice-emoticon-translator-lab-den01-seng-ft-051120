@@ -2,9 +2,10 @@
 require "yaml"
 emoticons = YAML.load_file('lib/emoticons.yml')
 
-def load_library(emoticons)
+def load_library(file_path)
   # code goes here
-  emoticon_hash = emoticons
+  emoticons = YAML.load_file(file_path)
+
   emoticons.reduce({}) do |emoticons, (name, symbols)|
     emoticons[name] ||= {}
     emoticons[name][:english] = symbols[0]
