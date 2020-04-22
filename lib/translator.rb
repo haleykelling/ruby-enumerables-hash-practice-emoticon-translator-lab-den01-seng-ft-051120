@@ -24,7 +24,7 @@ def get_english_meaning(file_path, emoticon)
       if symbol == emoticon
         return name
       end
-      return "Sorry, that emoticon was not found"
     end
+    puts "Sorry, that emoticon was not found"
   end
 end
