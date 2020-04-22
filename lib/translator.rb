@@ -22,7 +22,7 @@ def get_english_meaning(file_path, emoticon)
   emoticon_hash.each do |name, symbols_hash|
     symbols_hash.each do |language, symbol|
       if symbol == emoticon
-        return name 
+        return name
       end
     end
   end
