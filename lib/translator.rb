@@ -13,11 +13,13 @@ def load_library(file_path)
   end
 end
 
-def get_japanese_emoticon(file_path, emotion)
+def get_japanese_emoticon(file_path, english_emoticon)
   emoticon_hash = load_library(file_path)
   emoticon_hash.each do |name, symbols_hash|
-    if name == emotion
-      return symbols_hash[:japanese]
+    symbols_hash.each do |language, symbol|
+      if symbol == english_emoticon
+        return emoticon_hash[name][:japanese]
+      end
     end
   end
   puts "Sorry, that emoticon was not found"
