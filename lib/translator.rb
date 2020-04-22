@@ -10,7 +10,6 @@ def load_library(emoticons)
     emoticons[name][:japanese] = symbols[1]
     emoticons
   end
-  p emoticons
 end
 
 def get_japanese_emoticon
@@ -21,4 +20,3 @@ def get_english_meaning
   # code goes here
 end
 
-load_library(emoticons)
