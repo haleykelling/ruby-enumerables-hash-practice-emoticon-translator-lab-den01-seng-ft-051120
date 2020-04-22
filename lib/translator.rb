@@ -6,6 +6,7 @@ def load_library(emoticons)
   # code goes here
   emoticons_updated = {}
   emoticons.each do |name, symbols|
+    name => {}
     emoticons_updated[name][:english] = symbols[0]
     emoticons_updated[name][:japanese] = symbols[1]
   end
